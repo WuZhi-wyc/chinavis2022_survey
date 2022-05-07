@@ -268,7 +268,7 @@ Distinguished from chart visualization, glyph visualization refers to the target
 %体可视化是指对物体进行三维地呈现。制造业中可以通过CT对物体进行扫描成像，也可以通过图像数据生成三维数字仿真。
 Volume visualization can be described as the three-dimensional rendering of objects. In manufacturing, objects can be scanned and imaged by CT, or 3D digital simulations can be generated from image data.
 
-\begin{figure*}
+\begin{figure*}[h]
 	\centering
 	\includegraphics[width=\textwidth]{Images/imageandvideo2.png}
 	\vspace{-4em}
@@ -285,7 +285,7 @@ Volume visualization can be described as the three-dimensional rendering of obje
 We summarize the high-level interactive analysis methods~\cite{yi2007toward} which are commonly used in manufacturing multimedia data visualization, including \textit{Tracking \& Monitoring} (TM), \textit{Exploration \& Navigation} (EN), \textit{Knowledge Externalization} (KE), and \textit{Refinement \& Identification} (RI).
 %追踪和监控：通过点击、悬停或者刷选对感兴趣的数据进行标记。
 Tracking \& monitoring: mark data of interest by clicking, hovering or brushing.
-%探索和导航：     
+%探索和导航：通过平移、缩放、下拉或滚动查看数据。  
 Exploration \& navigation: review data by panning, zooming, drop-down or roll-up.
 %知识外化：通过类似快照的方式对当前的可视化进行收集、保存和提取
 Knowledge externalization: collect, save and extract current visualizations by taking snapshots.
@@ -411,25 +411,33 @@ Refinement \& identification facilitate analysts to label data based on known id
 Analysts label high and low quality results and optimize the search results in Paramorama prototype~\cite{Pretorius2011} .  
 
 %   应用领域
-\subsection{Application Areas}
+\subsection{Application Areas}Townsend2022
 % 图像和视频数据贯穿了整个制造业流程。
 Image and video data exist throughout the manufacturing process.
-% 通过对图像和视频数据的分析，研究人员可以发现产品是否有缺陷、加工工艺是否达标、设备安装是否正确。
-By analyzing the image and video data, researchers can find out whether the product is defective~\cite{Townsend2022,Murithi2020}, whether the processing is up to standard~\cite{tao2020machining}, and whether the equipment is installed correctly~\cite{Cirp2019}. 
-% 将虚拟现实和增强现实技术与图像和视频数据相结合，促进了可视化在工业生产领域的应用。
+% 在分析反馈中，通过对图像和视频数据的可视分析，研究人员发现产品缺陷，验证加工工艺，检查设备安装。
+In analysis \& feedback, researchers identify product defects, verify machining processes and check equipment installations through visual analysis of image and video data~\cite{Cirp2019,Murithi2020,tao2020machining}. 
+% 在设计研发中，研究人员会将分析和反馈中的不足之处进行总结，探究其产生原因，然后对产品进行完善。
+In design \& development, researchers will summarize the shortcomings in analysis \& feedback, explore the reasons, and then improve the product~\cite{Townsend2022}.
+% 将虚拟现实和增强现实技术与图像和视频数据相结合，促进了可视化和可视分析在工业生产中的应用。
 The application of visualization in industrial production is facilitated by integrating VR and AR technologies with image and video data~\cite{hamid2014virtual,Satkowski2021}. 
-% 为了减少成本，增加趣味性，方便展开职工培训，研究人员根据生产数据和行业安全手册开发了特定行业的安全培训互动模拟器。同时，也有研究人员对增强现实在人员装配培训的应用进行了论证。
-To reduce costs, increase interest and facilitate the rollout of employee training, researchers have developed industry-specific interactive simulators for safety training based on production data and industry safety manuals~\cite{Moreland2019}. Meanwhile, some researchers have also discussed whether the usage of AR in personnel assembly training is justified~\cite{buttner2020augmented}.
-
-
+% 在教育培训中，为了减少成本，增加趣味性，方便展开职工培训，研究人员根据生产数据和行业安全手册开发了特定行业的安全培训互动模拟器。同时，也有研究人员对增强现实在人员装配培训的应用进行了论证。
+In education \& training, to reduce costs, increase interest and facilitate the roll-out of employee training, researchers developed industry-specific interactive safety training simulators based on production data and industry safety manuals~\cite{Moreland2019}. Meanwhile, some researchers have also discussed whether the usage of AR in personnel assembly training is justified~\cite{buttner2020augmented}.
+%在工业生产中，增强现实辅助操作员了解设备参数。
+In industrial production, AR assist operators in understanding equipment parameters~\cite{Murithi2020,Satkowski2021}.
 
 %   讨论
 \subsection{Discussion}
+%早期图像和视频数据的研究集中在二维的图像数据，这可能是受限于计算机性能和可视化方式。一个值得注意的趋势是，AR和VR的使用越来越多。
+Early studies of image and video data focused on 2D data, which may be limited by computer performance and visualization methods. A notable trend is the increasing use of AR and VR. 
+%AR和VR设备相较于屏幕，拥有更强的交互性。以实际工厂为背景显示数据的AR，让操作员在巡视时可以直观的看到设备的运行数据。同样的，操作员可以通过AR设备在被检测的产品上显示其可能存在的缺陷。员工借助VR设备可以将虚拟环境中掌握生产流程、熟悉生产环境，提高了培训员工的效率和安全性。未来会有更多基于AR和VR设备的研究，包括展示高效展示更多的信息以及设备的拓展应用。
+AR and VR devices have a more interactive nature than screens. Operators wear AR devices with actual production scenes as the background during their inspections, allowing them to visualize the operating data of the equipment~\cite{Satkowski2021}. Similarly, the operator can use the AR device to display possible defects on the product being inspected~\cite{Murithi2020}. With VR equipments, employees can master the production process and get familiar with the production environment virtually, which improves the efficiency and safety of training~\cite{hamid2014virtual}. In the future, there will be more research based on AR and VR devices, including demonstrating efficient display of more information and expanded applications of the devices.
+%同时，数据维度也逐渐从二维扩展到三维。相较于平面，立体能够传达更多的信息。比如材料的物理结构信息，设备在立体空间中的位置关系等。为此，我们希望体可视化技术可以更多地应用在制造业中。
+At the same time, the data dimension has been extended from 2D to 3D. Compared to two dimensions, three dimensions can convey more information. For example, the physical structure of the material and the position of the device in the 3D space. To this end, we hope that volume visualization technologies would be more widely used in manufacturing.
 
-%  多类型数据
-\section{Multi-Type Data}
-%在本节，我们将针对制造业流程中的多类型数据综合分析的应用进行讨论。
-In this section, we will discuss the application of integrated analysis for multiple types of data in manufacturing processes.
+%  多数据类型合作
+\section{Multi-Type Data Collaboration}
+%在本节，我们将针对制造业流程中的多数据类型合作的应用进行讨论。
+In this section, we will discuss the researches for the collaboration of multiple data types in manufacturing processes.
 %   可视化技术
 \subsection{Visualization Techniques}
 %

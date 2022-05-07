@@ -23,6 +23,8 @@
 %\usepackage[authoryear,longnamesfirst]{natbib}
 %\usepackage[authoryear]{natbib}
 \usepackage[numbers]{natbib}
+\usepackage{graphicx}
+\usepackage{subfigure}
 
 \begin{comment}
 \def\tsc#1{\csdef{#1}{\textsc{\lowercase{#1}}\xspace}}
@@ -114,36 +116,336 @@
 	
 	\maketitle
 	
-%工业4.0的核心是智能生产技术和智能生产模式，旨在通过“物联网”和“务联网”，把产品、机器、资源和人联系在一起，推动各环节数据共享，实现产品全生命周期和全制造流程的数字化。
-%The core of Industry 4.0 is smart production technology and model. It aims to connect products, machines, resources and people through the \textit{Internet of Things} (IoT)~\cite{gubbi2013internet} and \textit{Internet of Services} (IoS)~\cite{cardoso2008service}, promote data sharing in all aspects, and realize the digitalization of the whole product life cycle and the whole manufacturing process.
-
-%通过广泛的文献回顾，添加了最近出现的新方法，并按照新的角度对主题进行重新分类。
- 
 
 
 %  介绍
 \section{Introduction}
+%工业4.0的核心是智能生产技术和智能生产模式，旨在通过“物联网”和“务联网”，把产品、机器、资源和人联系在一起，推动各环节数据共享，实现产品全生命周期和全制造流程的数字化。
+The core of Industry 4.0 is smart production technology and model. It aims to connect products, machines, resources and people through the \textit{Internet of Things} (IoT)~\cite{Gubbi2013} and \textit{Internet of Services} (IoS)~\cite{Cardoso2010}, promote data sharing in all aspects, and realize the digitalization of the whole product life cycle and the whole manufacturing process.
 
 
-% 相关综述和搜索文献方法
-\section{Related Surveys And Methodology}
+%在设计研发阶段，除了产品样式及功能的设计研发之外，还包括工厂、店铺的选址规划。
+%In design and development phase, in addition to the design and development of product styles and functions, it also includes the site selection and construction planning of factories and stores.
+%在生产制造阶段，原材料配送顺序，工作人员及设备排班，产品质量和工厂流水线监测分析等都是研究的热门方向。
+%In production phase, raw material distribution sequence, staff and equipment scheduling, product quality and factory line monitoring and analysis are all hot areas of research.
+%在销售服务阶段，产品宣传和广告设计、销售数据及反馈意见分析等同样非常重要。
+%In sales and service phase, product promotion and advertising design, sales data and feedback analysis are also very important.
+
+% 相关综述
+\section{Related Surveys}
+%在本节，我们将相关综述进行分类并讨论。
+In this section, we categorize and discuss relevant surveys.
+%我们搜集到的调查中，研究人员对现有工作的分类法和调查对象不尽相同。
+The taxonomy and research subjects in the surveys we collected are different.
+
+%就分类方法而言，周等人将面向智能制造应用的可视化研究，按照应用场景和行业类别进行分类。
+In terms of taxonomy, Zhou et al. categorized visualization studies oriented to smart manufacturing applications by \textit{application scenarios and industry sectors}~\cite{Zhou2019}.
+%在应用场景中他们提出了两个概念：“替代”和“创造”。然后他们将这两个概念进行进一步细分。“替代”概念，根据设备的内外部环境进行细分。“创造”概念，根据制造业流程中的设计、生产、测试和服务进行细分。最后，结合工业门类将收集到的工作进行分类。
+In the application scenario they proposed two concepts: "substitution" and "creation". And then they further subdivided these two concepts. The concept of " replacement" was subdivided according to the internal and external environment of the device. The concept of "creation" was broken down according to the four phases of manufacturing: design, production, testing, and service. Finally, ten familiar industry sectors were selected to classify the collected researches.
+%还有部分调查是按照国家政策或制造业相关知识进行分类的。
+Some other surveys are classified according to \textit{national policies} or \textit{manufacturing-related knowledge}~\cite{Kang2016,Gehlot2022}.
+%kang等人通过分析德国、美国、韩国等政府主导的政策和及技术路线图，确定了与智能制造相关的五项关键技术和三项附加或应用技术。五项关键技术包括：Cyber-physical system（cps）、cloud manufacturing、big data analytics、Internet-of-Things（IoT）、Smart sensor。三项附加或应用技术包括：3D printing、smart energy、hologram。
+Kang et al.~\cite{Kang2016} identified five key technologies and three additional or applied technologies related to smart manufacturing by analyzing government-led policies and technology roadmaps in Germany, the United States, and South Korea. The five key technologies include: Cyber-physical system (CPS), cloud manufacturing, big data analytics, Internet-of-Things (IoT), and Smart sensor. Three additional or applied technologies include: 3D printing, smart energy, and hologram.
+%Gehlot等人回顾了对工业发展具有里程碑意义的重要产品和服务。他们总结了工业4.0的六个主要方面，分析了工业4.0的不足之处，并以此提出了工业5.0的主要发展方向，预测了工业6.0的主要焦点。
+Gehlot et al.~\cite{Gehlot2022} reviewed the important products and services that have been milestones for industrial development. They summarized the six main aspects and analyzed the shortcomings of Industry 4.0, accordingly proposed the main directions of Industry 5.0 and predicted the main focus of Industry 6.0.
+
+%研究对象包括智能制造系统、大数据处理技术、制造业大数据生态、设备维护及监测以及数字孪生工厂。
+The research subjects include \textit{Smart manufacturing systems}(SMSs), \textit{big data processing technology}, \textit{manufacturing big data ecosystem}, \textit{equipment maintenance and monitoring}, and \textit{digital twin factory}.
+%Qu等人对智能制造的发展、定义、目标、功能需求、业务需求、技术需求、构成要素进行了概述。
+Qu et al.~\cite{Qu2019} provided an overview of the development, definition, objectives, functional requirements, business requirements, technical requirements, and components of SMSs.
+%Chhikara等人针对特征抽取和特征选择两个任务，比较分析了不同的降维技术。
+Chhikara et al.~\cite{Chhikara2022} compared and analyzed different dimensionality reduction techniques for two tasks, feature extraction and feature selection.
+%Cui等人提出了制造业大数据应用的六大驱动因素，以及大数据生态系统的九个重要组成部分。
+Cui et al.~\cite{Cui2020} proposed six drivers of big data applications in manufacturing and nine essential components of the big data ecosystem.
+%Baboli等人提出了健康关键绩效指标对设备进行健康监测，区分了四种类型的维护，并使用传感器参数对设备运行状况进行监视和可视化。
+Baboli et al.~\cite{Baboli2021} proposed Health Key Performance Indicators(HKPIs) to monitor the health of the equipment, distinguished four types of maintenance, and used sensor parameters to monitor and visualize equipment operating conditions.
+%Park等人提出了详细的操作程序，用来创建、同步和利用工业中心级别的数字孪生来提供适当的基于服务组合的技术功能。
+Park et al.~\cite{Park2020} proposed detailed operation procedures to create, synchronize, and utilize a work-center-level DT to provide appropriate service-composition-based technical functionality.
+
+%因为制造业门类繁多，流程复杂，针对制造业的工作的研究方向和研究对象很多。
+Because the manufacturing industry has a wide range of categories and complex processes, there are many research directions and research objects for the manufacturing industry.
+%有一部分调查是从微观的视角出发，对制造业中的具体技术或数据的相关工作进行总结。
+One part of the survey is a summary of the work related to specific technical or data in manufacturing from a micro perspective. 
+%Bruno等介绍了增强现实中的工业工程数据可视化的应用。
+Bruno et al.~\cite{Bruno2006} presented the application of industrial engineering data visualization in augmented reality.
+%Stevens等针对复杂汽车数据可视化做了总结，讨论了可视化在汽车制造中的作用。
+Stevens et al.~\cite{Schlereth2007} summarized for complex automotive data visualization and discuss the role of visualization in automotive manufacturing.
+%berg等仅仅对虚拟现实在产品设计和制造中的工业应用做了调查。
+Berg et al.~\cite{Berg2017} merely investigated the industrial applications of virtual reality in product design and manufacturing.
+%另一部分调查是从宏观的视角出发，对整个制造业中的数据，技术或者应用的相关工作进行总结。
+Another part of the survey is a summary of the work related to data, techniques or application areas in the entire manufacturing industry from a macro perspective.
+%Yin等人围绕工业过程监测的基本数据驱动方法做了细致的调查
+Yin et al.~\cite{Yin2014} made a detailed investigation around the basic data-driven approach to industrial process monitoring
+%David等人通过实例，探讨了交互式可视化的价值，并强调了工业工程社区在交互式可视化过程中必须面对的挑战，包括技术和知识限制、用户交互限制以及实现策略。 
+Using examples, David et al.~\cite{FontVivanco2019} explored the value of interactive visualization and highlighted the challenges that industrial engineering community must face in the interactive visualization process, including technical and knowledge limitations, user interaction limitations, and implementation strategies. 
+%Cardoso等人通过系统的文献综述评估增强现实的适用性和适用性对真实工业过程的影响，主要包括增强现实技术是如何应用的，哪些行业对该技术最感兴趣，该技术是如何发展以满足行业需求的，以及增强现实的好处和挑战。
+Cardoso et al.~\cite{DeSouzaCardoso2020} assessed the applicability and applicability of augmented reality to real industrial processes through a systematic literature review that focuses on how augmented reality is being applied, which industries are most interested in the technology, how the technology is evolving to meet industry needs, and the benefits and challenges of augmented reality.  
+
+%上述高质量调研工作不仅提供了充足的理论基础，还启发了我们对设计空间的形式化。与现有的为特定的可视化、可视分析任务或与制造业相关的应用总结技术的工作不同，我们的工作旨在为制造业中多媒体数据提供更全面的可视化与可视分析方法，从而是从业人员从更广泛的应用中受益。
+The above high-quality research works not only provide an adequate theoretical foundation, but also inspire our formalization of the design space. Unlike existing work that summarizes techniques for a particular visualization, visual analytics task, or manufacturing-related application, our work aims to provide a more comprehensive approach to visualization and visual analytics for multimedia data in manufacturing, and thus practitioners benefit from a wider range of research results.
+
+% 搜索文献方法及分类法
+\section{Methodology And Taxonomy}
+%在本节我们将详细描述论文的分类法和收集的方法论。   
+In this section we describe in detail the taxonomy of papers and the methodology of their collection.  
+ 
+%方法论
+\subsection{Methodology}
+%%为了阐明本调查的范围，我们阐明了我们工作中使用的三个术语：制造业、多媒体数据和可视化/可视分析。
+To clarify the scope of this survey, we articulate three terms used in our work: manufacturing, multimedia data, and visualization/visual analytics.
+%首先要说明是制造业是我们调查的领域。
+First, it is important to note that manufacturing is the area we investigated.
+%随着生产技术和社会需求的发展，制造业的门类不断完善。
+With the development of production technology and social demand, the categories of manufacturing industry have been improved.
+%现在中国国民经济行业分类中，制造业有31个大类，179个中类，609个小类。
+Nowadays, there are 31 major categories, 179 medium categories and 609 small categories in China's national economic industry classification.
+%我们主要对其中计算机技术普及程度较高的制造业类别进行调查。
+We focus on those manufacturing categories which have a high degree of computer technology and automation.
+%例如计算机制造、汽车整车制造、家用电力器具制造等。
+For example, computer manufacturing, automobile manufacturing, household electric appliance manufacturing, etc.
+%其次我们的分析对象是制造业全流程的多媒体数据，包括了结构化数据和非结构化数据。
+Secondly, we analyze multimedia data from the whole process of manufacturing industry, including both structured and unstructured data. 
+%传感器和计算机的使用，使得制造业中多媒体数据的收集越来越方便。
+The usage of sensors and computers has made it increasingly convenient to collect multimedia data in manufacturing.
+%因此，数据自身的实时性和数据间的关联性也有所增强。
+Consequently, the real-time nature of data itself and the correlation between data have been enhanced.
+%根据多媒体数据的类型进行针对性的快速细致的分析可以在制造业全流程的不同阶段做出及时的决策。
+Targeted, rapid and detailed analysis based on the type of multimedia data can make timely decisions at different stages of the entire manufacturing process.
+%这也是对制造业多媒体数据进行研究的内驱动力。
+It is also the internal motivation for research on multimedia data in manufacturing.
+%最后，我们我们关注的是运用在这些研究中的可视化与可视分析技术。
+Finally, we are concerned with the visualization and visual analytics techniques used in these studies.
+%可视化/可视分析技术因其直观性和有效性，被频繁应用在制造业多媒体数据的分析中。
+Visualization/visual analysis techniques are frequently used in the analysis of multimedia data in the manufacturing industry because of their intuitiveness and effectiveness.
+%我们希望调查在制造业多媒体数据分析中的可视化/可视分析技术，发现可视化研究社区感兴趣的应用领域，以及具体使用的可视化技术和交互分析方法。
+We attempt to investigate visualization and visual analytics techniques of multimedia data in manufacturing to discover application areas of interest to the visualization research community, as well as visualization techniques and interactive analysis methods.
+
+%我们对在可视化会议或者期刊上已发表的论文进行了关键词搜索。
+We conducted a keyword search for papers that have been published in visualization conferences or journals to collect suitable literature.
+%关键词的例子包括但不限于“制造业”，“工业”，“智能制造”，“制造业流程”，“工业4.0”。
+Examples of keywords include but are not limited to "manufacturing", "industrial", "smart manufacturing", "manufacturing process ", "Industry 4.0".
+%此外，我们的工作试图在其他高质量综述的基础上，探索制造业中可视化研究社区感兴趣的可视化技术、交互分析方法和应用领域。
+Moreover, our work attempts to explore visualization techniques, interactive analysis methods, and application areas of interest to the visualization research community in manufacturing, building on other high-quality reviews.
+
+%分类法
+\subsection{Taxonomy}
+%受第二节提到的高质量综述的启发，我们提出了一种新的基于数据类型的分类方法，对制造业多媒体数据的可视化与可视分析进行总结。
+Inspired by the high-quality review mentioned in Section 2, we propose a novel taxonomy to summarize works related to the visualization and visual analysis of multimedia data in manufacturing.
+%我们添加了最近发表的工作，并从可视化技术、交互式分析方法和应用领域进行详细讨论。
+We add recently published works and discuss them in detail in terms of visualization techniques, interactive analysis methods and application areas.
+%我们用不同的颜色对不同的分类维度进行编码：红色为多媒体数据类型、蓝色为可视化技术、紫色为交互式分析方法、黄色为应用领域。
+We encode the different classification dimensions with different colors:
+\raisebox{-0.4mm}{\includegraphics[scale=0.25]{Images/red.png}} for multimedia data types, 
+\raisebox{-0.4mm}{\includegraphics[scale=0.25]{Images/blue.png}} for visualization techniques, 
+\raisebox{-0.4mm}{\includegraphics[scale=0.25]{Images/purple.png}} for interactive analysis methods, and 
+\raisebox{-0.4mm}{\includegraphics[scale=0.25]{Images/yellow.png}} for application areas.
 
 
-% 分类法
-\section{Taxonomy}
+%数据类型。从数据类型的角度可以将多媒体数据可以大致分为三大类：表格文本数据，传感信号数据、图像和视频数据。
+\raisebox{-0.4mm}{\includegraphics[scale=0.25]{Images/red.png}}
+\textbf{Multimedia data types}. Multimedia data can be broadly classified into three main categories according to data types: \textit{Tabular text data} (TT), \textit{Signal sensing data} (SS), \textit{Image and video data} (IV).
+%表格文本数据包含了以表格形式和文本形式存储的数据。制造业中有大量的数据是以表格形式存在的，例如销售记录、产品参数、生产日志等。用户投诉建议、产品描述、维修记录说明等则是以文本形式存储。
+Tabular text data contains data stored in both tabular form and text form.
+There is a large amount of data in the form of tabular forms, such as sales records, product parameters, production logs, etc. User complaints and suggestions, product descriptions, and maintenance record descriptions are stored in text form.
+%信号传感数据包含了多种传感器收集到的数据，其中有声音传感器收集到的音频数据，有红外光学运动传感器收集到的动作数据，还有在物联网中的传感器收集到的轨迹数据。
+Signal sensing data contains data collected by various sensors, including audio data collected by sound sensors, motion data collected by infrared optical motion sensors, and trajectory data collected by sensors in the IoT.
+%图像视频数据中有一部分是由摄像机获取的真实数据，还有一部分是由数字仿真生成的。
+Part of the image and video data is the real data acquired by cameras, and another part is generated by digital simulation.
+
+%可视化技术。我们将应用在制造业多媒体数据的可视化技术分为顺序可视化、图可视化、文本可视化、图表可视化、字符可视化和体可视化。
+\raisebox{-0.4mm}{\includegraphics[scale=0.25]{Images/blue.png}}
+\textbf{Visualization techniques}. We classify visualization techniques applied to multimedia data in manufacturing as \textit{sequence, graph, text, chart, glyph, and volume visualizations}. 
+%序列可视化说明了数据具有的时间信息。序列可视化可以发现数据中异常情况，也可以探索数据的发展模式。通常，研究人员将时间作为单独的一个维度进行展示，例如规定一个坐标轴表示时间。与此相对应的可视化表现可以是折线图、流图。也可以对每个时间刻度上的数据属性进行更详细的展示，例如平行坐标系。
+Sequence visualization illustrates the temporal information that the data has. Sequence visualization can identify anomalies in the data and explore patterns in the development. Generally, researchers present time as a separate dimension, for example by specifying a coordinate axis to represent time. The corresponding visual representation can be timeline visualization and flow visualization. More detailed presentation of data attributes on each time scale, such as parallel coordinate systems, is also available.
+%图可视化是由点和边组成的网络结构。网络结构可以是有向的，也可以是无向的。常见的图可视化包括了节点链接图、树图、桑吉图。图可视化可以让用户发现数据之间的关联，例如数据的层级关系、属性联系、顺承关系。
+Graph visualization is a network structure consisting of points and edges. The network structure can be directed or undirected. Typical  graph visualizations include node-link diagrams, trees, and Sankey diagrams. Graph visualization allows users to discover associations between data, such as hierarchical relationships, attribute associations, and codependencies.
+%文本可视化主要关注是否在可视分析时引入文本数据。常见的文本可视化技术除了词云外，还会通过对文本内容进行高亮，以显示更多的上下文信息。
+Text visualization focuses on whether to introduce text data in visual analysis. In addition to word clouds, text visualization can be visually enhanced by highlighting and also paired with other visualization techniques so as to show more contextual content, such as flow visualization.
+%图表可视化主要是指借助了传统的可视化元素进行展示。例如散点图、柱状图、折线图、热力图和气泡图等。
+Chart visualization mainly refers to the presentation with the help of traditional visualization elements. Typical chart visualizations are scatter, bar, line, heat and bubble charts, etc.
+%字形可视化是指区别图表可视化，在可视化元素上进行了针对性的设计。
+Distinguished from chart visualization, glyph visualization refers to the targeted design on visualization elements to produce a new visual representation.
+%体可视化是指对物体进行三维地呈现。制造业中可以通过CT对物体进行扫描成像，也可以通过图像数据生成三维数字仿真。
+Volume visualization can be described as the three-dimensional rendering of objects. In manufacturing, objects can be scanned and imaged by CT, or 3D digital simulations can be generated from image data.
+
+%交互分析方法
+\raisebox{-0.4mm}{\includegraphics[scale=0.25]{Images/purple.png}}
+\textbf{Interactive analysis methods}. 
+%我们总结了在制造业多媒体数据可视化中常用的高层次交互分析方法，包括了追踪监控、探索导航、知识外化和细化识别。
+We summarize the high-level interactive analysis methods~\cite{yi2007toward} which are commonly used in manufacturing multimedia data visualization, including \textit{Tracking \& Monitoring} (TM), \textit{Exploration \& Navigation} (EN), \textit{Knowledge Externalization} (KE), and \textit{Refinement \& Identification} (RI).
+%追踪和监控：通过点击、悬停或者刷选对感兴趣的数据进行标记。
+Tracking \& monitoring: mark data of interest by clicking, hovering or brushing.
+%探索和导航：     
+Exploration \& navigation: review data by panning, zooming, drop-down or roll-up.
+%知识外化：通过类似快照的方式对当前的可视化进行收集、保存和提取
+Knowledge externalization: collect, save and extract current visualizations by taking snapshots.
+%细化识别：通过已知的认证对数据进行标记。
+Refinement \& identification: label data by known identities.
+%研究人员和操作人员可以利用这四类交互分析方法完成制造业中的可视化分析任务。
+Researchers and operators may use these four categories of interactive analysis methods to complete visualization and analysis tasks for manufacturing multimedia data.
+
+%应用领域
+\raisebox{-0.4mm}{\includegraphics[scale=0.25]{Images/yellow.png}}
+\textbf{Application areas}. 
+%根据制造业实际生产需求，我们将制造业多媒体数据可视化与可视分析的应用领域分为四类：设计研发、工业生产、教育培训和分析反馈。
+According to the actual production needs of the manufacturing industry, we classify the application areas of multimedia data visualization and visual analysis in manufacturing into four categories: \textit{Design \& Development} (DD), \textit{Industrial Production} (IP), \textit{Education \& Training} (ET), and \textit{Analysis \& Feedback} (AF).
+
+%   表格文本数据
+\section{Tabular Text Data}
+%在本节，我们将针对制造业中的表格文本数据进行讨论。
+In this section, we will discuss for tabular text data in manufacturing processes.
+
+%   可视化技术
+\subsection{Visualization Techniques}
+
+%   交互分析手段
+\subsection{Interactive Analysis Methods}
+
+%   应用领域
+\subsection{Application Areas}
+
+%   讨论
+\subsection{Discussion}
+
+%   传感信号数据
+\section{Signal Sensing Data}
+%在本节，我们将针对制造业中传感信号数据进行讨论。
+In this section, we will discuss for signal sensing data in manufacturing processes.
+
+%   可视化技术
+\subsection{Visualization Techniques}
+
+%   交互分析手段
+\subsection{Interactive Analysis Methods}
+
+%   应用领域
+\subsection{Application Areas}
+
+%   讨论
+\subsection{Discussion}
+
+%   图像视频数据
+\section{Image \& Video Data}
+%在本节，我们将针对制造业中图像视频数据进行讨论
+In this section, we will discuss for image and video data in manufacturing processes.
+%摄影摄像设备在制造业中的应用，产生了大量的图像视频数据。这些数据通常被用来监测工厂设备的运行情况、检测产品质量。
+The application of photographic camera equipments in the manufacturing industry generate a large amount of image and video data, which are used to monitor the operation of equipment in factories and to check the quality of products.
+%视频数据在按帧抽取后，也可以视为图像数据。因此，处理两种数据的方法在一定程度上是可以通用的。
+Video data, when extracted by frame, can also be considered as image data. Therefore, the methods for handling both kinds of data can be common to some extent.
+%以往对图象和视频的分析需要人的介入。这耗费了大量的人力，而且无法做到效率和准确率之间的平衡。
+Previously, the analysis of images and videos required human intervention. It was labor-intensive and the balance between efficiency and accuracy could not be maintained.
+%随着计算机计算能力和GPU性能的增强，对图像和视频数据的分析研究变得更为方便，成为制造业多媒体数据中的新兴研究方向。
+With the enhancement of computer computing power and GPU performance, the analysis and research of image and video data have become more convenient and become an emerging research direction in manufacturing multimedia data.
+%同时，近些年人工智能和机器学习的崛起，使得即高效有准确的处理图象和视频数据成为可能。
+At the same time, the rise of artificial intelligence and machine learning in recent years has made it possible to process image and video data efficiently and accurately.
+%而虚拟现实和增强现实的发展，使得分析数据从二维扩展到三维，同时增加了新的可视化展示和交互分析方法。
+And the development of virtual reality and augmented reality has expanded the analysis of data from two-dimensional to three-dimensional, while adding new visual displays and interactive analysis methods.
 
 
-% 可视化技术
-\section{Visual Analysis Techniques}
+
+%   可视化技术
+\subsection{Visualization Techniques}
+%为了方便分类和参数关系的展示，图经常在对图像和视频数据进行分析的相关研究中被看到。
+Graph visualization is often seen in relevant researches for the analysis of image and video data in order to facilitate the classification and the presentation of parameter relationships.
+%Pretorius等人提出了一种基于参数采样和交互式视觉探索的优化参数的范式变化。他们设计了一个叫做Paramorama的原型。其中输入参数和相应输出之间的关系就是用来树（有向无环图）来展示的。
+Pretorius et al.~\cite{Pretorius2011} proposed a paradigm shift for optimizing parameters based on parameter sampling and interactive visual exploration. They designed a prototype called Paramorama. Where the relationship between the input parameters and the corresponding outputs was presented using a tree (directed acyclic graph).
+%CommunityDiff中在节点-链接图的基础上增加了额外的约束，从而对相同社区的节点进行分类，同时保持节点之间的联系。
+Additional constraints were added to the node-link graph in \textit{CommunityDiff}~\cite{Emelyanova} so that nodes classified as the same community are restricted to the same rectangle, while maintaining connections between nodes.
+%在Locomotion Vault，一个可视化工具和数据库，中也用了节点-链接图来表示不同技术之间的相似度。
+Node-link graphs are also used in \textit{Locomotion Vault}~\cite{Luca2021}, a visualization tool and a database of over 100 techniques that were proposed by researchers and practitioners in the academia and industry, to represent the similarity between different technologies.
+
+%图表可视化在图像和视频分析中也较为常见。在Gkorou等人的工作中，将用于监控和诊断大容量半导体制造的最相关因素进行可视化并进行排名，其中运用了散点图、热力图和盒须图。
+Chart visualization is one of the common visualization techniques used in image and video data analysis. In the work of Gkorou et al~\cite{Gkorou2017}. the most relevant factors for monitoring and diagnosing high volume semiconductor manufacturing were visualized and ranked, where scatter plot, heatmap and boxplot were utilized.
+%Locomotion Vault中使用了柱状图来展示每一年中技术的数量。
+Bar chart was used in \textit{Locomotion Vault} to show the number of technologies in each year.
+
+%利用三维扫描或者数字仿真的技术，我们可以对产品和工业设备进行体可视化。
+Volume visualization of products and industrial equipments can be performed by means of 3D scanning or digital simulation techniques.
+%Tao等人基于X射线显微CT对PCB孔进行三维表面扫描，对加工精度进行检测。
+Tao et al.~\cite{tao2020machining} performed 3D surface scanning of PCB holes based on X-ray micro-CT to check the machining accuracy.
+%Amirkhanov等人利用4DCT数据对玻璃纤维增强聚合物进行数字建模，从而发现其缺陷。
+Amirkhanov et al.~\cite{tao2020machining} used 4DCT data for numerical modeling of glass fiber reinforced polymers to find defects.
+%Cirp等人通过3D扫描产生的3D空间数据进行模拟，从而对制造系统和原型设计进行可视化支持。
+Cirp et al.~\cite{Cirp2019} simulated the 3D spatial data generated by 3D scanning to provide visualization support for designing manufacturing systems and prototypes.
+
+%   交互分析手段 
+\subsection{Interactive Analysis Methods}
+%交互分析手段可以让分析人员更好的对图像和视频数据进行追踪监控和分析研究，从而发掘数据中更深层的知识，并将反映出的知识反馈到实际工业生产活动中。
+Interactive analytics methods allow researchers to better analyze image and video data to uncover deeper knowledge. 
+
+% 追踪监控允许用户对特定的对象进行分析研究。
+Tracking \& monitoring allow analysts to perform analytical research on target objects. 
+%在Paramorama原型中，用户可以选择感兴趣的输入参数，然后追踪其与输出结果之间的关系。
+In Paramorama prototype~\cite{Pretorius2011}, users can select the input parameters of interest and then trace their relationship with the output results.
+
+% 探索导航通过对界面的平移和缩放，组织结构的展开和折叠，对图像参数之间的影响进行分析。
+Exploration \& navigation analyze the impact between image parameters by panning and zooming the interface, expanding and collapsing the organizational structure.
+%CommunityDiff中的利用树状图显示不同集合输出之间关系和比例。
+CommunityDiff~\cite{Datta2018} used tree diagrams to show the relationships and proportions between the different collection outputs.
+
+% 知识外化为研究人员外化当前可视化内容提供了一种途径。 
+Knowledge externalization provides a way for researchers to externalize the content of current visualizations. 
+%Satkowski等人以工业3D场景为背景，从主观感知和客观测量分析了视觉背景对增强现实的影响。
+Satkowski et al~\cite{Satkowski2021}. analyzed the impact of visual context on augmented reality in terms of subjective perception and objective measurements using industrial 3D scenes as a background.
+
+% 细化识别方便用户依据已知的身份对数据进行标记。
+Refinement \& identification facilitate analysts to label data based on known identities.
+%用户标记高质量和低质量的结果，对搜索结果进行优化。
+Analysts label high and low quality results and optimize the search results in Paramorama prototype~\cite{Pretorius2011} .  
+
+%   应用领域
+\subsection{Application Areas}
+% 图像和视频数据贯穿了整个制造业流程。
+Image and video data exist throughout the manufacturing process.
+% 通过对图像和视频数据的分析，研究人员可以发现产品是否有缺陷、加工工艺是否达标、设备安装是否正确。
+By analyzing the image and video data, researchers can find out whether the product is defective~\cite{Townsend2022,Murithi2020}, whether the processing is up to standard~\cite{tao2020machining}, and whether the equipment is installed correctly~\cite{Cirp2019}. 
+% 将虚拟现实和增强现实技术与图像和视频数据相结合，促进了可视化在工业生产领域的应用。
+The application of visualization in industrial production is facilitated by integrating VR and AR technologies with image and video data~\cite{hamid2014virtual,Satkowski2021}. 
+% 为了减少成本，增加趣味性，方便展开职工培训，研究人员根据生产数据和行业安全手册开发了特定行业的安全培训互动模拟器。同时，也有研究人员对增强现实在人员装配培训的应用进行了论证。
+To reduce costs, increase interest and facilitate the rollout of employee training, researchers have developed industry-specific interactive simulators for safety training based on production data and industry safety manuals~\cite{Moreland2019}. Meanwhile, some researchers have also discussed whether the usage of AR in personnel assembly training is justified~\cite{buttner2020augmented}.
+
+\begin{figure*}
+	\centering
+	\subfigure[the first subfigure]{
+		\begin{minipage}[b]{0.2\textwidth}
+			\includegraphics[width=1\textwidth]{Images/Nodefect.png}
+		\end{minipage}
+	}
+	\subfigure[the second subfigure]{
+		\begin{minipage}[b]{0.2\textwidth}
+			\includegraphics[width=1\textwidth]{Images/Bentstrut.png}
+		\end{minipage}
+	}
+	\caption{Defect Detection}
+	\label{fig:hor_2figs_1cap_2subcap}
+	\vspace{-2em}
+\end{figure*}
 
 
-% 应用
-\section{Application}
+%   讨论
+\subsection{Discussion}
 
-% 
+%  多类型数据
+\section{Multi-Type Data}
+%在本节，我们将针对制造业流程中的多类型数据综合分析的应用进行讨论。
+In this section, we will discuss the application of integrated analysis for multiple types of data in manufacturing processes.
+%   可视化技术
+\subsection{Visualization Techniques}
+%
+
+%   交互分析手段
+\subsection{Interactive Analysis Methods}
+
+%   应用领域
+\subsection{Application Areas}
+
+%   讨论
+\subsection{Discussion}
+
+% 总结和机会
+\section{Conclusion And Opportunities}
 
 \bibliographystyle{cas-model2-names}
-\bibliography{SISI_dc}
+\bibliography{multimedia}
 
 \end{document}
-

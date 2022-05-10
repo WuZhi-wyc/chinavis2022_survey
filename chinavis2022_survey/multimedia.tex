@@ -189,6 +189,15 @@ The above high-quality research works not only provide an adequate theoretical f
 %在本节我们将详细描述论文的分类法和收集的方法论。   
 In this section we describe in detail the taxonomy of papers and the methodology of their collection.  
  
+\begin{figure}[t]
+	\centering
+	\vspace{.5em}
+	\includegraphics[width=0.48\textwidth]{Images/table.pdf}
+	\caption{Categorization of the literature published in each section of this paper is based on manufacturing multimedia data types, visualization techniques, interaction analysis methods, and application areas.}
+	\vspace{-1em}
+	\label{table}
+\end{figure}
+ 
 %方法论
 \subsection{Methodology}
 %%为了阐明本调查的范围，我们阐明了我们工作中使用的三个术语：制造业、多媒体数据和可视化/可视分析。
@@ -295,20 +304,94 @@ According to the actual production needs of the manufacturing industry, we class
 \section{Tabular Text Data}
 %在本节，我们将针对制造业中的表格文本数据进行讨论。
 In this section, we will discuss for tabular text data in manufacturing processes.
-%表格文本数据是制造业中最常见的数据类型之一。本节讨论的表格文本数据包含了结构化数据和非结构化数据。
-Tabular text data is one of the most common types of data in manufacturing. The tabular text data discussed in this section contains both structured and unstructured data.
+%表格文本数据是制造业中最常见的数据类型之一。本节讨论的表格文本数据包含了结构化数据、非结构化数据和半结构化数据。
+Tabular text data is one of the most common types of data in manufacturing. The tabular text data discussed in this section contains structured data, unstructured data and semi-structured data.
+%结构化数据是指可以使用关系型数据库表示和存储的，变现为二维形式的数据。每一行表示一个实体，每一列数据的属性是相同的。
+Structured data is data that can be stored with relational databases and expressed in two-dimensional form. Each row represents an entity, and the attributes of each data column are the same.
+%非结构数据是指没有一个预先定义好的数据模型或者方式来组织数据。文本数据就是典型的非结构化数据。
+Unstructured data is data that is organized without predefined data models or methods. Text data is one of the typical unstructured data.
+%半结构化数据是介于结构化数据和非结构化数据之间的数据。它并不符合关系型数据库或其他数据表的形式关联起来的数据模型结构，但包含相关标记，用来分隔的语义元素以及对记录和字段进行分层。因此，它也被称为自描述的结构，包括email、日志、XML文档和JSON文档。
+Semi-structured data is data between structured and unstructured, which do not conform to the structure of the data model associated in the form of relational databases or other data tables, but contain associated tags, semantic elements for delimitation and hierarchy of records and fields. Therefore, it is also known as a self-describing structure that includes emails, log files, XML files and JSON files.
+%制造业中的表格文本数据具有体量大、维度高、关系复杂的特点。可视化和可视分析的介入可以方便研究人员对表格文本数据进行更详细的分析。
+Tabular text data in the manufacturing industry is large-scale, high-dimensional, and complex relational. The intervention of visualization and visual analysis can facilitate researchers to analyze the tabular text data with more details.
+
+\begin{figure*}[pos=t]
+	\centering
+	\includegraphics[width=\textwidth]{Images/tabular text data.pdf}
+	\vspace{-4em}
+	%表格文本数据对时间性的可视化。
+	\caption{Visualization of temporality for tabular text data. (1)  (2)  (3)  (4) }
+	\label{fig:tabulartextdata}
+	\vspace{-1.5em}
+\end{figure*}
 
 %   可视化技术
 \subsection{Visualization Techniques}
+% 序列可视化可以表达表格文本数据的时间性。
+Sequence visualization conveys temporality in tabular text data to users through a special form of visual communication. 
+%依据时间的连续性，研究人员用线，弯的或者直的，代表时间。
+Depending on the continuity of time, the researchers used lines, curved or straight, to represent time~\cite{bach2015time}.
+%为了显示数据随时间的变化，研究人员在一维和二维形式的可视化中将时间作为一个维度。
+To illustrate the variation of data over time, the researchers used time as a dimension in the visualization of both one and two dimensional forms.
+%在一维的可视化形式中，数据直接在时间线上进行展示。在二维的可视化形式中，用直角坐标系中的X轴或者Y轴表示时间线。
+In one-dimensional visualization, the data is presented directly on the timeline~\cite{chen2017sequence,fulda2015timelinecurator,Gove}. In two-dimensional visualization, the timeline is represented by x-axis or y-axis in rectangular coordinate~\cite{Friedl2021,herr2018visual,sun2019planningvis}.
+
+%图可视化的研究应用于阐述数据中蕴涵的关系。park2016visual
+Graph visualization is applied to explore the relationships involved in data~\cite{basole2014visual,Klammer2020,park2016visual,Qian2022,Sharif2014}.
+%在Park等人设计的可视化分析系统中，网络图不仅集成了供应网络各种相关的观点和视角，还能突出供应网络的不同的结构。图可视化被Basole等人用来对供应网络风险进行可视分析，而RCDVis则用其交互式检测数据总的罕见类别。
+In the visual analysis system designed by Park et al. the graph visualization not only integrates various relevant views and perspectives, but also highlights the different structures of a supply network~\cite{park2016visual}. Graph visualization was used by Basole et al.~\cite{basole2014visual} for visual analysis of supply network risk, while RCDVis~\cite{Qian2022} was used to interactively detect rare categories.
+
+%图形可视化中，散点图可以显示离散数据的分布，平行坐标系可以显示多属性数据，折线图和直方图可以显示数据大小和变化趋势。
+In chart visualization, scatter plots can illustrate the distribution of discrete data~\cite{Mei2019,Fellow2017}, parallel coordinates can display multi-attribute data~\cite{Fellow2017}, line and bar charts can show data volume and trend~\cite{sun2019planningvis,Oppermann}. 
+%SMARTexplore用矩阵图和热力图展示高维数据。McNutt使用代数可视化对表格制图做了分析。
+SMARTexplore presented high-dimensional data with matrix and heat maps~\cite{Blumenschein2018}. McNutt made an analysis of table cartograms with algebraic visualization design~\cite{McNutt2021}.
+
+%字形可视化在其设计中会隐喻数据的一些属性融入。
+Glyph visualization metaphorically incorporates some attributes of the data in its design~\cite{chen2017sequence,sun2019planningvis}. 
+%PlanningVis利用基于时间轴的字形来表示各种生产计划及其差异的汇总信息。这个字形视图可以揭示配置变化的宏观影响，包括改进计划和模拟市场或工厂中的意外事件。
+PlanningVis used timeline based glyphs to present summarized information of various production plans and their differences. By using this glyph view, you can reveal the macro impact of configuration changes, including improving the plan and simulating unexpected events in the market or factory.~\cite{sun2019planningvis}.
+%chen等人用三角形符号编码事件插入的数量。用户双击原型中的三角形符号对它们进行详细分析。
+Chen et al.~\cite{chen2017sequence} used triangle glyphs to encode the number of event insertions. Users can double-click on the triangle glyphs in the prototype to analyze them in detail.
 
 %   交互分析手段
 \subsection{Interactive Analysis Methods}
+%交互分析手段能减少表格文本数据体量大、维度高、关系复杂所带来的挑战。
+Interactive analysis methods reduce the challenges posed by the large volume, high dimensionality and complex relationships of tabular text data.
+%追踪和监控可以让用户在高度集成或者信息隐藏的可视化分析系统中追踪重要的信息。LiveGantt利用悬停的方式展示详细信息。
+Tracking and monitoring allows users to track important information in a highly integrated or information-hidden visual analytics system.
+LiveGantt~\cite{Jo2014} displays detailed information via mouse hover. 
+%探索和导航提供了用户改变可视化视图。PlanningVis利用选择列表的下拉和上滚选择目标数据集。
+Exploration and navigation provides users access to change visualization view. PlanningVis~\cite{sun2019planningvis} used drop-down and roll-up of list to select target dataset.
+%DataShot从数据表中提取了大量有趣的数据，然后根据训练好的决策树将数据映射为可视化，并将其进行外部表达。
+DataShot~\cite{wang2019datashot} extracted a large amount of interesting data from the data table, then mapped the data to visualizations based on a trained decision trees and expressed them externally.
+%不同的交互式分析手段结合在可视化分析系统是常见的现象。
+It is common for different interactive analysis methods to complement each other in visual analytics systems~\cite{Qian2022,sun2019planningvis,Fellow2017}.
+%在RCDVis中，用户除了可以标注稀有分类的节点进行“细化识别”，同时可以对节点链接图进行平移和缩放进行“探索和导航”。
+In RCDVis, users can not only label the nodes corresponding to rare categories for refinement \& identification, but also pan and zoom the node link map for exploration \& navigation.
 
 %   应用领域
 \subsection{Application Areas}
+%制造业表格文本数据中记录的数据是多源的，其应用领域大多是“分析反馈”。
+Tabular text data of manufacturing is multi-source and mainly applied for analysis \& feedback~\cite{Gove,Mei2019,sun2019planningvis,Wang2018}.
+%RCDVis通过对图的交互式分析检测数据中的罕见类别。
+RCDVis~\cite{Qian2022} detected rare categories among graph data  by interactive analysis.
+%Gove提出了一种叙事摘要算法，对事件报告和网络日志进行叙事可视化，提高了报告精度。
+Gove~\cite{Gove} proposed a narrative summary algorithm to visualize incident reports and network logs, and its compact representation earned positive reviews from analysts.
+%在工业生产，合理安排制造计划是十分关键的，为此PlanningVis和LiveGantt展开了详细的研究。
+In industrial production, properly organizing manufacturing schedules is crucial, and PlanningVis~\cite{sun2019planningvis} and LiveGantt~\cite{Jo2014} have conducted extensive work on this topic.
+%在设计研发，工作主要集中在如何提高表格文本数据的展示效果，其中与算法相关的，也有与自动化生成相关的。
+In design and development, collected articles focus on how to improve the presentation of tabular text data. Some of them are related to algorithms~\cite{Bartram2022,McNutt2021,Mei2019}, and some to automated generation~\cite{Liu2021,Wang}.
 
 %   讨论
 \subsection{Discussion}
+%除了制造业外，其他领域也会产生表格文本数据。尽管数据来源不同，但一些可视化与可视分析方法是通用的。
+In addition to manufacturing, other fields also generate tabular text data. Despite that data comes from different sources, some visualization and visual analysis methods are versatile.
+%例如工厂生产计划与列车时刻表类似，基于内容的文本相似性推荐可以用在维修日志的记录和图书馆书本的管理。
+For example, factory production schedules are similar to train schedules which require time series analysis. Content-based text similarity recommendation can be used for maintenance log recording and library book management.
+%我们发现，随着机器学习和人工智能的发展，表格文本数据的自动可视化生成很有发展空间。
+With the development of machine learning and artificial intelligence, we found that automatic visual generation of tabular text data is promising.
+%还有关于如何高效地展示数据和可视化布局的挑战急需解决。
+There are also challenges about how to present data and visualize layouts efficiently that need to be addressed urgently~\cite{Blumenschein2018,Mei2019}.
 
 %   传感信号数据
 \section{Signal Sensing Data}
@@ -379,15 +462,15 @@ At the same time, the rise of artificial intelligence and machine learning in re
 %而虚拟现实和增强现实的发展，使得分析数据从二维扩展到三维，同时增加了新的可视化展示和交互分析方法。
 And the development of virtual reality and augmented reality has expanded the analysis of data from two-dimensional to three-dimensional, while adding new visual displays and interactive analysis methods.
 
-\begin{figure*}
+\begin{figure}[pos=h]
 	\centering
-	\includegraphics[width=\textwidth]{Images/imageandvideo.png}
+	\includegraphics[width=0.48\textwidth]{Images/imageandvideo.pdf}
 	\vspace{-4em}
 	%图像和视频数据应用于缺陷检测的研究。
-	\caption{Researches on the application of image and video data for defect detection.(1) Check the equipment installation with 3D scanning. (2) Detection of the machining accuracy of PCB holes. (3) Markerless cooperative augmented reality-based intelligent manufacturing review system. (4) Volume visualization of the physical structure of additively manufactured parts, including one normal case (far left) and five abnormal cases.}
+	\caption{Research on the application of image and video data for defect detection.(1) Volume visualization of the physical structure of additively manufactured parts, including one normal case (far left) and five abnormal cases. (2) Detection of the machining accuracy of PCB holes. (3) Markerless cooperative augmented reality-based intelligent manufacturing review system. (4) Check the equipment installation with 3D scanning.}
 	\label{fig:imageandvideo}
-	\vspace{-2em}
-\end{figure*}
+	\vspace{-1.5em}
+\end{figure}
 
 %   可视化技术
 \subsection{Visualization Techniques}
@@ -407,62 +490,57 @@ Bar chart was used in \textit{Locomotion Vault} to show the number of technologi
 
 %利用三维扫描或者数字仿真的技术，我们可以对产品和工业设备进行体可视化。
 Volume visualization of products and industrial equipments can be performed by means of 3D scanning or digital simulation techniques.
-%Tao等人基于X射线显微CT对PCB孔进行三维表面扫描，对加工精度进行检测。
-Tao et al.~\cite{tao2020machining} performed 3D surface scanning of PCB holes based on X-ray micro-CT to check the machining accuracy.
 %Amirkhanov等人利用4DCT数据对玻璃纤维增强聚合物进行数字建模，从而发现其缺陷。
-Amirkhanov et al.~\cite{tao2020machining} used 4DCT data for numerical modeling of glass fiber reinforced polymers to find defects.
+Amirkhanov et al.~\cite{amirkhanov2016visual} used 4DCT data for numerical modeling of glass fiber reinforced polymers to find defects.
 %Cirp等人通过3D扫描产生的3D空间数据进行模拟，从而对制造系统和原型设计进行可视化支持。
 Cirp et al.~\cite{Cirp2019} simulated the 3D spatial data generated by 3D scanning to provide visualization support for designing manufacturing systems and prototypes.
+%Tao等人基于X射线显微CT对PCB孔进行三维表面扫描，对加工精度进行检测。
+Tao et al.~\cite{tao2020machining} performed 3D surface scanning of PCB holes based on X-ray micro-CT to check the machining accuracy.
+%Design by Dragging 引入了一种新的方法，以尽可能直接的设计与模拟。
 
 %   交互分析手段 
 \subsection{Interactive Analysis Methods}
 %交互分析手段可以让分析人员更好的对图像和视频数据进行追踪监控和分析研究，从而发掘数据中更深层的知识，并将反映出的知识反馈到实际工业生产活动中。
 Interactive analytics methods allow researchers to better analyze image and video data to uncover deeper knowledge. 
-
 % 追踪监控允许用户对特定的对象进行分析研究。
 Tracking \& monitoring allow analysts to perform analytical research on target objects. 
 %在Paramorama原型中，用户可以选择感兴趣的输入参数，然后追踪其与输出结果之间的关系。
 In Paramorama prototype~\cite{Pretorius2011}, users can select the input parameters of interest and then trace their relationship with the output results.
-
 % 探索导航通过对界面的平移和缩放，组织结构的展开和折叠，对图像参数之间的影响进行分析。
 Exploration \& navigation analyze the impact between image parameters by panning and zooming the interface, expanding and collapsing the organizational structure.
 %CommunityDiff中的利用树状图显示不同集合输出之间关系和比例。
 CommunityDiff~\cite{Datta2018} used tree diagrams to show the relationships and proportions between the different collection outputs.
-
 % 知识外化为研究人员外化当前可视化内容提供了一种途径。 
 Knowledge externalization provides a way for researchers to externalize the content of current visualizations. 
 %Satkowski等人以工业3D场景为背景，从主观感知和客观测量分析了视觉背景对增强现实的影响。
 Satkowski et al~\cite{Satkowski2021}. analyzed the impact of visual context on augmented reality in terms of subjective perception and objective measurements using industrial 3D scenes as a background.
-
 % 细化识别方便用户依据已知的身份对数据进行标记。
 Refinement \& identification facilitate analysts to label data based on known identities.
 %用户标记高质量和低质量的结果，对搜索结果进行优化。
 Analysts label high and low quality results and optimize the search results in Paramorama prototype~\cite{Pretorius2011} .  
 
-%   应用领域
-\subsection{Application Areas}Townsend2022
-% 图像和视频数据贯穿了整个制造业流程。
-Image and video data exist throughout the manufacturing process.
-% 在分析反馈中，通过对图像和视频数据的可视分析，研究人员发现产品缺陷，验证加工工艺，检查设备安装。
-In analysis \& feedback, researchers identify product defects, verify machining processes and check equipment installations through visual analysis of image and video data~\cite{Cirp2019,Murithi2020,tao2020machining}. 
-% 在设计研发中，研究人员会将分析和反馈中的不足之处进行总结，探究其产生原因，然后对产品进行完善。
-In design \& development, researchers will summarize the shortcomings in analysis \& feedback, explore the reasons, and then improve the product~\cite{Townsend2022}.
-% 将虚拟现实和增强现实技术与图像和视频数据相结合，促进了可视化和可视分析在工业生产中的应用。
-The application of visualization in industrial production is facilitated by integrating VR and AR technologies with image and video data~\cite{hamid2014virtual,Satkowski2021}. 
-% 在教育培训中，为了减少成本，增加趣味性，方便展开职工培训，研究人员根据生产数据和行业安全手册开发了特定行业的安全培训互动模拟器。同时，也有研究人员对增强现实在人员装配培训的应用进行了论证。
-In education \& training, to reduce costs, increase interest and facilitate the roll-out of employee training, researchers developed industry-specific interactive safety training simulators based on production data and industry safety manuals~\cite{Moreland2019}. Meanwhile, some researchers have also discussed whether the usage of AR in personnel assembly training is justified~\cite{buttner2020augmented}.
-%在工业生产中，增强现实辅助操作员了解设备参数。
-In industrial production, AR assist operators in understanding equipment parameters~\cite{Murithi2020,Satkowski2021}.
-
-\begin{figure*}[pos=h]
+\begin{figure*}[pos=t]
 	\centering
-	\includegraphics[width=\textwidth]{Images/imageandvideo2.png}
-	\vspace{-4em}
+	\includegraphics[width=\textwidth]{Images/imageandvideo2.pdf}
+	\vspace{-5.5em}
 	%增强现实和虚拟现实在制造业中的应用。
-	\caption{Augmented reality and virtual reality in manufacturing. (1) Assisted industrial assembly training with a projection-based AR system. (2) Virtual reality applications in manufacturing systems. (3) Interactive simulator for steel industry safety training. (4) Augmented reality that uses the real factory environment as a background to display equipment information.}
+	\caption{Augmented reality and virtual reality in manufacturing. (1) Assisted industrial assembly training with a projection-based AR system. (2) Virtual reality applications in manufacturing systems. (3) Interactive simulator for steel industry safety training. (4) Augmented reality that uses the real factory environment as a background to display equipment information. (5) Final demonstration and use of the industrial internet of things (IIoT) based augmented reality for factory data collection and visualization by Volvo technicians.}
 	\label{fig:imageandvideo2}
 	\vspace{-2em}
 \end{figure*}
+
+%   应用领域
+\subsection{Application Areas}Townsend2022
+% 图像和视频数据贯穿了整个制造业流程。将虚拟现实和增强现实技术与图像和视频数据相结合，促进了可视化和可视分析在工业生产中的应用。
+Image and video data exist throughout the manufacturing process. The application of visualization in industrial production is facilitated by integrating VR and AR technologies with image and video data~\cite{hamid2014virtual,Satkowski2021}. 
+% 在分析反馈中，通过对图像和视频数据的可视分析，研究人员发现产品缺陷，验证加工工艺，检查设备安装。
+In analysis \& feedback, researchers identify product defects, verify machining processes and check equipment installations through visual analysis of image and video data~\cite{Cirp2019,Murithi2020,tao2020machining}. 
+%通过将用于监控和指导的AR头戴设备与用于更详细数据分析的便携式平板设备相结合，使现场操作人员能够及时对重大错误事件做出反应，并调查事件的历史，已确定因果关系。
+By combining an AR headset for monitoring and guidance with a portable tablet device for more detailed data analysis, field operators are able to respond to major error events in a timely manner and investigate the history of the event to identify causality~\cite{Becher2022,Murithi2020,North2021,Satkowski2021}.
+% 在设计研发中，研究人员会将分析和反馈中的不足之处进行总结，探究其产生原因，然后对产品进行完善。
+In design \& development, researchers will summarize the shortcomings in analysis \& feedback, explore the reasons, and then improve the product~\cite{Townsend2022}.
+% 在教育培训中，为了减少成本，增加趣味性，方便展开职工培训，研究人员根据生产数据和行业安全手册开发了特定行业的安全培训互动模拟器。同时，也有研究人员对增强现实在人员装配培训的应用进行了论证。
+In education \& training, to reduce costs, increase interest and facilitate the roll-out of employee training, researchers developed industry-specific interactive safety training simulators based on production data and industry safety manuals~\cite{Moreland2019,Pantforder2009}. Meanwhile, some researchers have also discussed whether the usage of AR in personnel assembly training is justified~\cite{buttner2020augmented}.
 
 
 %   讨论

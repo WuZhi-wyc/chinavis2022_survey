@@ -320,7 +320,7 @@ Tabular text data in the manufacturing industry is large-scale, high-dimensional
 	\includegraphics[width=\textwidth]{Images/tabular text data.pdf}
 	\vspace{-4em}
 	%表格文本数据对时间性的可视化。
-	\caption{Visualization of temporality for tabular text data. (1)  (2)  (3)  (4) }
+	\caption{Visualization of temporality for tabular text data. (1) Visualization and summary of an incident report. (2) Visual analytics system for event sequence data exploration. (3) Display a timeline of Scandinavian pop music with TimeLineCurator. (4) Interface of PlanningVis which supports interactive exploration, comparison and optimization of production plans (5) Visual Analytics for Decomposing Temporal Event Series of Production Lines. (6) Visual monitoring of storage process runs.}
 	\label{fig:tabulartextdata}
 	\vspace{-1.5em}
 \end{figure*}
@@ -353,13 +353,23 @@ PlanningVis used timeline based glyphs to present summarized information of vari
 %chen等人用三角形符号编码事件插入的数量。用户双击原型中的三角形符号对它们进行详细分析。
 Chen et al.~\cite{chen2017sequence} used triangle glyphs to encode the number of event insertions. Users can double-click on the triangle glyphs in the prototype to analyze them in detail.
 
+\begin{figure}[pos=h]
+	\centering
+	\includegraphics[width=0.49\textwidth]{Images/tabulartextdata2.pdf}
+	\vspace{-3em}
+	%图像和视频数据应用于缺陷检测的研究。
+	\caption{Models and algorithms applied to tabular text data.}
+	\label{fig:imageandvideo}
+	\vspace{-1.5em}
+\end{figure}
+
 %   交互分析手段
 \subsection{Interactive Analysis Methods}
 %交互分析手段能减少表格文本数据体量大、维度高、关系复杂所带来的挑战。
 Interactive analysis methods reduce the challenges posed by the large volume, high dimensionality and complex relationships of tabular text data.
-%追踪和监控可以让用户在高度集成或者信息隐藏的可视化分析系统中追踪重要的信息。LiveGantt利用悬停的方式展示详细信息。
+%追踪和监控可以让用户在高度集成或者信息隐藏的可视化分析系统中追踪重要的信息。LiveGantt利用悬停的方式展示详细信息。Meyert等人通过框选显示存储过程的详细信息。
 Tracking and monitoring allows users to track important information in a highly integrated or information-hidden visual analytics system.
-LiveGantt~\cite{Jo2014} displays detailed information via mouse hover. 
+LiveGantt~\cite{Jo2014} displays detailed information via mouse hover. Meyer et al.~\cite{Meyer2013} displayed the details of the stored procedure by brushing the target node.
 %探索和导航提供了用户改变可视化视图。PlanningVis利用选择列表的下拉和上滚选择目标数据集。
 Exploration and navigation provides users access to change visualization view. PlanningVis~\cite{sun2019planningvis} used drop-down and roll-up of list to select target dataset.
 %DataShot从数据表中提取了大量有趣的数据，然后根据训练好的决策树将数据映射为可视化，并将其进行外部表达。

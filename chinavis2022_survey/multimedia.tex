@@ -411,6 +411,19 @@ In this section, we will discuss for signal sensing data in manufacturing proces
 A wide variety of sensors are used in manufacturing production to collect data from mechanical equipment, manufacturing lines, and manufactured products.
 %这些传感器记录了设备的各种数据，如:温度，湿度，压力，流量，速度，位置等。
 These sensors record various data of the equipment, such as: temperature, humidity, pressure, flow, speed, position, etc.
+%视觉分析作为解释和解释复杂数据的重要技术，越来越多地应用于工业数据分析中。
+Visual analytics is increasingly being used in industrial data analysis settings as a momentous technology for explaining and interpreting complex data.
+
+\begin{figure*}
+	\centering
+	\includegraphics[width=\textwidth]{Images/signal data.pdf}
+	\vspace{-1em}
+	%表格文本数据对时间性的可视化。
+	\caption{Visualization and anlysis for signal sensing data. (1) Visualizing and analyzing correlation patterns of	electrical engines. (2) Situation awareness and visual analytics for the routine monitoring and troubleshooting of Roller Hearth Kiln. (3) Visual analysis for understanding durability of automotive products. (4) Pareto front visualization for engineering design. (5) Visual data analysis of functional safety of vehicles.}
+	\label{fig:signaldata}
+	\vspace{-1.5em}
+\end{figure*}
+
 
 %   可视化技术
 \subsection{Visualization Techniques}
@@ -463,17 +476,6 @@ PAVED \cite{cibulski2020paved} offered a selection on motor parameter subset per
 %知识外化和细化识别被经常用于异常发现和态势监测方面。
 Knowledge \& Externalization and Refinement \& Identification are commonly utilized in anomaly detection and situational monitoring.
 IRVINE \cite{eirich2021irvine} combines interactive clustering and data labeling techniques, allowing users to analyze clusters of engines with similar signatures. Analysing signatures from engines acoustic data to detect and understand previously unknown errors.
-
-\begin{figure*}
-	\centering
-	\includegraphics[width=\textwidth]{Images/signal data.pdf}
-	\vspace{-1em}
-	%表格文本数据对时间性的可视化。
-	\caption{Visualization and anlysis for signal sensing data. (1) Visualization and summary of an incident report. (2) Visual analytics system for event sequence data exploration. (3) Display a timeline of Scandinavian pop music with TimeLineCurator. (4) Interface of PlanningVis which supports interactive exploration, comparison and optimization of production plans (5) Visual Analytics for Decomposing Temporal Event Series of Production Lines.}
-	\label{fig:signaldata}
-	\vspace{-1.5em}
-\end{figure*}
-
 %   应用领域
 \subsection{Application Areas}
 %信号传感数据来源众多，主要应用于设计开发、工业生产、分析反馈领域。
@@ -483,12 +485,14 @@ In Design \& Development, these work \cite{Huettenberger2015, Suzuki2020, Zappul
 % 在工业生产中，一些可视分析系统被设计用于工业生产态势监测，生产质量控制，生产产品检验。
 In Industrial Production, several visual analytics systems are designed for industrial production situational monitoring \cite{Zhou2018}, production quality control \cite{Huettenberger2015} and manufacturing product inspection \cite{eirich2021irvine}.
 %大多数研究工作都有分析反馈环节，比如：通过人机交互和专家合作方式分析参数集合用于改进电动机。
-In Analysis \& Feedback, most of the research work has an analytical feedback component, e.g., the analysis of parameter sets for the improvement of electric motor design by means of human-computer interaction and expert collaboration \cite{cibulski2020paved}.
+In Analysis \& Feedback, most of the research work have the analytical feedback component, e.g., the analysis of parameter sets for the improvement of electric motor design by means of human-computer interaction and expert collaboration \cite{cibulski2020paved}.
 
 
 %   讨论
 \subsection{Discussion}
-
+%由于信号数据的多样性和复杂性，通用的可视分析方案和框架很难应用于制造产业的研发与生产过程。目前的可视化研究工作是针对某个具体的制造环节和制造产品的研发，比如： PAVED, IRVINE, SafetyLens等。这些可视分析系统的确帮助解决了一些实际工业生产制造和设计研发中的难题。但这些工作往往都需要专业的工程师一起协作，过高的专业性使可视化方案不再具有普适性。另外，在多传感器数据分析方面，如何利用好这些多元化数据去发现新的模式是值得我们去研究的。
+Due to the diversity and complexity of signal data, generic visual analytics solutions and frameworks are difficult to apply to research and development and production processes in the manufacturing industry.
+Current visualization research is focused on the development of a specific industrial segment and product, such as SafetyLens \cite{narechania2020safetylens}, PAVED \cite{cibulski2020paved}, IRVINE \cite{eirich2021irvine}, and so on. These visual analytics systems do help to solve some challenges in actual industrial manufacturing and design development. However, these efforts commonly require professional engineers to work together, and the excessive specialization makes the visualization solutions no longer universal. In addition, when it comes to multi-sensor data analysis, it is worthwhile to investigate how making good use of these diversified data to discover new patterns. 
 %   图像视频数据
 \section{Image \& Video Data}
 %在本节，我们将针对制造业中图像视频数据进行讨论

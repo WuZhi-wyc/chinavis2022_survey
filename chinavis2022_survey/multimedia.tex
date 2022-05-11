@@ -195,7 +195,7 @@ In this section we describe in detail the taxonomy of papers and the methodology
 	\includegraphics[width=0.48\textwidth]{Images/table.pdf}
 	\caption{Categorization of the literature published in each section of this paper is based on manufacturing multimedia data types, visualization techniques, interaction analysis methods, and application areas.}
 	\vspace{-1em}
-	\label{table}
+	\label{fig:table}
 \end{figure}
  
 %方法论
@@ -342,7 +342,7 @@ Graph visualization is applied to explore the relationships involved in data~\ci
 In the visual analysis system designed by Park et al. the graph visualization not only integrates various relevant views and perspectives, but also highlights the different structures of a supply network~\cite{park2016visual}. Graph visualization was used by Basole et al.~\cite{basole2014visual} for visual analysis of supply network risk, while RCDVis~\cite{Qian2022} was used to interactively detect rare categories.
 
 %图形可视化中，散点图可以显示离散数据的分布，平行坐标系可以显示多属性数据，折线图和直方图可以显示数据大小和变化趋势。
-In chart visualization, scatter plots can illustrate the distribution of discrete data~\cite{Mei2019,Fellow2017}, parallel coordinates can display multi-attribute data~\cite{Fellow2017}, line and bar charts can show data volume and trend~\cite{sun2019planningvis,Oppermann}. 
+In chart visualization, scatter plots can illustrate the distribution of discrete data~\cite{Mei2019,Fellow2017}, parallel coordinates can display multi-attribute data~\cite{Fellow2017,Tang2022}, line and bar charts can show data volume and trend~\cite{sun2019planningvis,Oppermann}. 
 %SMARTexplore用矩阵图和热力图展示高维数据。McNutt使用代数可视化对表格制图做了分析。
 SMARTexplore presented high-dimensional data with matrix and heat maps~\cite{Blumenschein2018}. McNutt made an analysis of table cartograms with algebraic visualization design~\cite{McNutt2021}.
 
@@ -390,7 +390,7 @@ Gove~\cite{Gove} proposed a narrative summary algorithm to visualize incident re
 %在工业生产，合理安排制造计划是十分关键的，为此PlanningVis和LiveGantt展开了详细的研究。
 In industrial production, properly organizing manufacturing schedules is crucial, and PlanningVis~\cite{sun2019planningvis} and LiveGantt~\cite{Jo2014} have conducted extensive work on this topic.
 %在设计研发，工作主要集中在如何提高表格文本数据的展示效果，其中与算法相关的，也有与自动化生成相关的。
-In design and development, collected articles focus on how to improve the presentation of tabular text data. Some of them are related to algorithms~\cite{Bartram2022,McNutt2021,Mei2019}, and some to automated generation~\cite{Liu2021,Wang}.
+In design and development, collected articles focus on how to improve the presentation of tabular text data. Some of them are related to algorithms~\cite{Bartram2022,McNutt2021,Mei2019}, and some to automated generation~\cite{Liu2021,wang2019datashot}.
 
 %   讨论
 \subsection{Discussion}
@@ -616,12 +616,19 @@ Moreover, adding some interactive functions can help researchers discover connec
 We choose several multimedia data collaboration cases to explain the role of visualization and visual analytics.
 
 %数字孪生
-\subsection{Digital Twin}
+\textbf{Digital Twin}
 %数字孪生是指通过集成物理反馈数据，并辅以人工智能、机器学习和软件分析，在信息化平台内建立一个数字化模拟。
+The digital twin refers to the creation of a digital simulation within an information technology platform by integrating physical feedback data and supplementing with artificial intelligence, machine learning and software analysis. When generating digital twins for specific industries, researchers need to explore five different directions: architecture, modeling, control algorithms, rule models, and physical-digital twin control~\cite{lei2021toward}. The humanmachine interaction problem of digital twin modeling on the Physical-Cyber side and Cyber-Human side needs to be solved by a digital twin visualization system for flexible manufacturing systems~\cite{Fan2021}. In practice, the digital twin data in the manufacturing environment can be visualized with the help of wearable devices (AR), providing operators with more useful and comprehensive information~\cite{Zhu2019}.
 
+\textbf{Location Selection} To increase economic benefits, manufacturing industries may shift locations. The selection of locations is determined by several factors. Selecting a warehouse in business districts is a multi-criteria decision that needs to be based on urban road network data, GPS
+trajectory data, warehouse data, and store data. Visualization and visual analytics can help researchers compare and analyze these data to make the best choice~\cite{Li2020}.
+
+\textbf{Production lines} Production lines are the top priority in manufacturing. The production process generates a large amount of data, including production rate, product quality and equipment status. It is challenging to effectively analyze and extract valuable information from complex production lines~\cite{wu2018visual}. The visual analytics system, ViDX, supports real-time tracking of assembly line performance and exploration of historical data to identify inefficiencies and anomalies~\cite{xu2016vidx}.
 
 % 总结和机会
 \section{Conclusion And Opportunities}
+In the context of Industry 4.0, the demand for analyzing manufacturing data has increased significantly. Visualization and visual analytics as an effective tool can help researchers extract useful and valuable information from the complex and high-volume manufacturing data. In this paper, we investigate and discuss works related to the visualization and visual analysis of multimedia data in manufacturing. We propose a novel taxonomy that classifies multimedia
+data into tabular text data, sensing signal data, and image and video data, according to their types. Then we introduce different multimedia data in terms of visualization techniques, interactive analysis methods, and application areas. As shown in Figure~\ref{fig:table}, we encode the taxonomic bases with different colors.
 
 \bibliographystyle{cas-model2-names}
 \bibliography{multimedia}

@@ -120,32 +120,49 @@
 
 %  介绍
 \section{Introduction}
+%近年，制造业在社会经济发展中扮演着越来越重要的角色。
+In recent years, the manufacturing industry plays an increasingly important role in social and economic development.
+%调查分析各国主导的政策以及提出的技术路线图，我们可以了解与智能制造相关的五项关键技术，分别为Cyber-physical system（cps）、cloud manufacturing、big data analytics、Internet-of-Things（IoT）、Smart sensor。
+After investigating and analyzing country-led policies and proposed technology roadmaps, we can learn about five key technologies related to smart manufacturing, which are cyber-physical system (CPS), cloud manufacturing, big data analytics, internet-of-things (IoT), and smart sensor~\cite{Gehlot2022,Kang2016}.
+%此外还有三项应用技术分别为3D printing、smart energy、hologram。
+Besides, there are three application technologies, which are 3D printing, smart energy and hologram.
+
 %工业4.0的核心是智能生产技术和智能生产模式，旨在通过“物联网”和“务联网”，把产品、机器、资源和人联系在一起，推动各环节数据共享，实现产品全生命周期和全制造流程的数字化。
-The core of Industry 4.0 is smart production technology and model. It aims to connect products, machines, resources and people through the \textit{Internet of Things} (IoT)~\cite{Gubbi2013} and \textit{Internet of Services} (IoS)~\cite{Cardoso2010}, promote data sharing in all aspects, and realize the digitalization of the whole product life cycle and the whole manufacturing process.
-
-
+The core of Industry 4.0 is smart production technology and model. It aims to connect products, machines, resources and people through IoT and internet of services (IoS), promote data sharing in all aspects, and realize the digitalization of the whole product life cycle and the whole manufacturing process~\cite{Cardoso2010,Gubbi2013}.
+%制造业全流程大致可以分为三个主要阶段：设计与研发、生产测试和销售服务。
+The entire manufacturing process can be broadly divided into three main phases: design \& development, production \& testing, and sales \& service~\cite{Zhou2019}.
+%三个阶段分别有不同的任务和数据。
+Each of the three phases has its own tasks and data.
 %在设计研发阶段，除了产品样式及功能的设计研发之外，还包括工厂、店铺的选址规划。
-%In design and development phase, in addition to the design and development of product styles and functions, it also includes the site selection and construction planning of factories and stores.
-%在生产制造阶段，原材料配送顺序，工作人员及设备排班，产品质量和工厂流水线监测分析等都是研究的热门方向。
-%In production phase, raw material distribution sequence, staff and equipment scheduling, product quality and factory line monitoring and analysis are all hot areas of research.
+In design \& development phase, in addition to product appearances and functions, it also includes the site selection and construction planning of factories and stores.
+%在生产测试阶段，原材料配送顺序，工作人员及设备排班，产品质量和工厂流水线的监测分析等都是研究的热门方向。
+In production \& testing phase, raw material distribution sequence, staff and equipment scheduling, product quality and factory line monitoring and analysis are all hot directions of research.
 %在销售服务阶段，产品宣传和广告设计、销售数据及反馈意见分析等同样非常重要。
-%In sales and service phase, product promotion and advertising design, sales data and feedback analysis are also very important.
+In sales \& service phase, product promotion and advertising design, sales data and feedback analysis are also very important.
+%上述阶段产生的多媒体数据包括了表格、文字、图片、视频和信号。
+The multimedia data generated in the above phase includes tables, text, images, videos, and sensing signals.
+
+%可视化与可视化分析是一门综合性学科，与图形学、数据挖掘以及人机交互等众多研究领域关系密切。
+Visualization and visual analytics is a comprehensive subject that is closely related to many research areas such as graphics, data mining, and man-machine interaction.
+%可视化和可视分析有多种途径将海量信息直观高效的转换成知识并进行推理。
+Visualization and visual analytics have multiple approaches to convert massive amounts of information into knowledge and reasoning in an intuitive and efficient manner.
+%在本文中，我们系统回顾了制造业多媒体数据的可视化与可视分析相关的研究工作。
+In this paper, we systematically review research work related to the visualization and visual analysis of multimedia data in manufacturing.
+%我们介绍了文章收集和评审的方法论，并提出了一种新颖的基于多媒体数据类型的分类方法。
+We introduce a methodology for paper collection and review, and propose a novel taxonomy based on multimedia data types.
+%接着，我们从可视化技术、交互分析方法和应用领域三个维度对收集到的论文进行归纳总结。
+Then, we summarize the collected papers in three dimensions: visualization techniques, interaction analysis methods and application areas.
+%最后，我们讨论了现有工作的不足，并为未来工作提供了意见。
+Finally, we conclude with a discussion of existing work and provide suggestions for future work.
 
 % 相关综述
 \section{Related Surveys}
 %在本节，我们将相关综述进行分类并讨论。
 In this section, we categorize and discuss relevant surveys.
+%
 %我们搜集到的调查中，研究人员对现有工作的分类法和调查对象不尽相同。
 The taxonomy and research subjects in the surveys we collected are different.
 
-%就分类方法而言，周等人将面向智能制造应用的可视化研究，按照应用场景和行业类别进行分类。
-In terms of taxonomy, Zhou et al. categorized visualization studies oriented to smart manufacturing applications by \textit{application scenarios and industry sectors}~\cite{Zhou2019}.
-%在应用场景中他们提出了两个概念：“替代”和“创造”。然后他们将这两个概念进行进一步细分。“替代”概念，根据设备的内外部环境进行细分。“创造”概念，根据制造业流程中的设计、生产、测试和服务进行细分。最后，结合工业门类将收集到的工作进行分类。
-In the application scenario they proposed two concepts: "substitution" and "creation". And then they further subdivided these two concepts. The concept of " replacement" was subdivided according to the internal and external environment of the device. The concept of "creation" was broken down according to the four phases of manufacturing: design, production, testing, and service. Finally, ten familiar industry sectors were selected to classify the collected researches.
-%还有部分调查是按照国家政策或制造业相关知识进行分类的。
-Some other surveys are classified according to \textit{national policies} or \textit{manufacturing-related knowledge}~\cite{Kang2016,Gehlot2022}.
-%kang等人通过分析德国、美国、韩国等政府主导的政策和及技术路线图，确定了与智能制造相关的五项关键技术和三项附加或应用技术。五项关键技术包括：Cyber-physical system（cps）、cloud manufacturing、big data analytics、Internet-of-Things（IoT）、Smart sensor。三项附加或应用技术包括：3D printing、smart energy、hologram。
-Kang et al.~\cite{Kang2016} identified five key technologies and three additional or applied technologies related to smart manufacturing by analyzing government-led policies and technology roadmaps in Germany, the United States, and South Korea. The five key technologies include: Cyber-physical system (CPS), cloud manufacturing, big data analytics, Internet-of-Things (IoT), and Smart sensor. Three additional or applied technologies include: 3D printing, smart energy, and hologram.
 %Gehlot等人回顾了对工业发展具有里程碑意义的重要产品和服务。他们总结了工业4.0的六个主要方面，分析了工业4.0的不足之处，并以此提出了工业5.0的主要发展方向，预测了工业6.0的主要焦点。
 Gehlot et al.~\cite{Gehlot2022} reviewed the important products and services that have been milestones for industrial development. They summarized the six main aspects and analyzed the shortcomings of Industry 4.0, accordingly proposed the main directions of Industry 5.0 and predicted the main focus of Industry 6.0.
 
@@ -358,7 +375,7 @@ Chen et al.~\cite{chen2017sequence} used triangle glyphs to encode the number of
 	\includegraphics[width=0.49\textwidth]{Images/tabulartextdata2.pdf}
 	\vspace{-3em}
 	%图像和视频数据应用于缺陷检测的研究。
-	\caption{Models and algorithms applied to tabular text data.}
+	\caption{Models and algorithms applied to tabular text data. (1) Automatic visualization answer for natural language questions on tabular data. (2) A utility-based visualization method for anonymizing multi-attribute tabular data. (3) Distribution-aware data representation of large-scale tabular datasets for flexible visual queries. (4) Automatic generation of fact tables from table data annotations. }
 	\label{fig:tabulartextdata2}
 	\vspace{-1.5em}
 \end{figure}
@@ -600,7 +617,7 @@ AR and VR devices have a more interactive nature than screens. Operators wear AR
 %同时，数据维度也逐渐从二维扩展到三维。相较于平面，立体能够传达更多的信息。比如材料的物理结构信息，设备在立体空间中的位置关系等。为此，我们希望体可视化技术可以更多地应用在制造业中。
 At the same time, the data dimension has been extended from 2D to 3D. Compared to two dimensions, three dimensions can convey more information. For example, the physical structure of the material and the position of the device in the 3D space. To this end, we hope that volume visualization technologies would be more widely used in manufacturing.
 
-%  多种多媒体数据合作
+%  具体应用和
 \section{Multiple Multimedia Data Collaboration}
 %在本节，我们将针对制造业流程中的多种多媒体数据合作的应用进行讨论。
 In this section, we will discuss multiple multimedia data collaborations in manufacturing processes.
@@ -659,8 +676,13 @@ Therefore, it is essential to design common visual analysis solutions and proces
 Visualization and visual analytics can also be used to design system architectures to reduce inefficiencies in the manufacturing process~\cite{Marconi2021,Yao2019}.
 
 \textbf{Multi-Source and Multi-Type Data Fusion Visual Analytics.}
+%制造业流程由多个环节、多个任务组成。每个环节之间相互作用，环环相扣，它们是数据的产生源，且产生的数据类型不尽相同。
+Manufacturing processes are composed by several stages and tasks. Each stage interacts with each other in an interlocking manner, which are sources of data generation and produce various types of data.
+%如何利用好多源多类型数据去发现隐藏的模式是值得我们去研究的。 
+It is worthwhile to investigate how to use multiple sources of multi-type data to discover hidden patterns.
+%在未来，我们可以设计将更多的信息展示在一个字形中。合理的可视分析技术也是潜在的解决方式。
+In the future, we can design glyphs that display more information. Reasonable visual analysis techniques are also potential solutions.
 
-%\bibliographystyle{unsrt}
 \bibliographystyle{cas-model2-names}
 \bibliography{multimedia}
 

@@ -432,30 +432,30 @@ Visual analytics is increasingly being used in industrial data analysis settings
 	\vspace{-1.5em}
 \end{figure*}
 
-
 %   可视化技术
 \subsection{Visualization Techniques}
 %序列可视化在传感信号数据中非常普遍。
 Sequence visualization is highly prevalent in sensing signal data.
-%Zhao等人提出了一种利用大规模长期耐久性试验数据的可视化分析方法，来研究汽车起动机耐久性的关键因素。
-Zhao et al. \cite{zhao2019visual} proposed a visual analysis method using large-scale and long-term durability test data to  investigate the key factor of the durability of automotive starters.
 %基于不同传感器记录的发动机转速、发动机扭矩、温度、压力和废气测量数据，提出了一种灵活、可扩展的发动机异常检测可视化分析方法。
 Based on engine speed, engine torque, temperatures, pressures and exhaust gas measures data recorded by varied sensors, Suschnigg et al. \cite{suschnigg2020exploration} presented a flexible and expandable visual analytics approach for anomaly detection on engine.
+%Zhao等人提出了一种利用大规模长期耐久性试验数据的可视化分析方法，来研究汽车发动机耐久性的关键因素。
+Zhao et al. \cite{zhao2019visual} proposed a visual analysis method using large-scale and long-term durability test data to investigate the key factor of the durability of car engine.
 %Kagaya等人开发了一种技术，使用运动传感器来记录预防性维修期间工人动作的时序三维坐标数据，以便提取高质量维修工作的重要迹象。
 Kagaya et al. \cite{Kagaya2017} developed a technique using a motion sensor to record time-series 3-D coordinate data of a worker's motions during preventative maintenance in order to extract important indications of high-quality maintenance work.
 
 %图表可视化通常用于分析不同类型的信号传感数据，完成可视化分析任务。
-Chart visualization is commonly employed to analyze different types of signal sensing data and complete visual analysis tasks.
-%zhou等人设计了一个信息丰富的视觉分析系统，以实现复杂的关键制造设施辊道窑的常规监视和故障排除。
-Zhou et al. \cite{Zhou2018} designed an informative visual analysis system to achieve the routine monitoring and troubleshooting of the complex key manufacturing facility Roller Hearth Kiln.
-%Wang等人开发了带有节点链接图和详细数据视图的AFExplorer，以探索音频特征子集。
-Wang et al. \cite{Wang2022} developed the AFExplorer with node-link diagram and detailed data view to explore the audio feature subset.
-%IRVINE使用声学数据来检测和理解电气发动机制造中以前未知的错误。
-IRVINE \cite{eirich2021irvine} used acoustic data to detect and understand previously unknown errors in the manufacturing of electrical engines.
+Chart visualization is commonly employed to analyze different types of signal sensing data and complete visual analysis tasks. 
+Real-time analysis of sensing data for production monitoring and industrial design through histogram \cite{Zhou2018, eirich2021irvine}, scatter diagram \cite{eirich2021irvine, cibulski2020paved} and parallel coordinate \cite{cibulski2020paved}.
+%zhou等人设计了一个的视觉分析系统，以实现复杂的关键制造设施辊道窑的常规监视和故障排除。
+Zhou et al. \cite{Zhou2018} designed a visual analysis system which combines information rich glyph and sequence diagram to achieve the routine monitoring and troubleshooting of the complex key manufacturing facility Roller Hearth Kiln.
 % PAVED提供了一种交互式平行坐标可视化方法，以帮助工程师探索具有众多参数和标准的设计方案。
-PAVED \cite{cibulski2020paved} provided an interactive parallel coordinates visualization to assist engineers to explore design alternatives, which are characterized by numerous parameters and criteria.
+%PAVED \cite{cibulski2020paved} provided an interactive parallel coordinates visualization to assist engineers to explore design alternatives, which are characterized by numerous parameters and criteria.
+%IRVINE使用声学数据来检测和理解电气发动机制造中以前未知的错误。
+They \cite{eirich2021irvine} used acoustic data to detect and understand previously unknown errors in the manufacturing of electrical engines.
+%使用节点-链接图、网络和集群等可视化形式分析离线传感数据。
+Analyze offline sensing data using visualizations such as node-link graph\cite{Wang2022}, network and cluster\cite{narechania2020safetylens}.
 %SafetyLens是一个可视化的数据分析工具，结合了网络和集群探索技术，帮助工程师分析汽车功能安全数据集。
-SafetyLens, \cite{narechania2020safetylens}a visual data analysis tool, which combined network and cluster exploration techniques to help engineers in analyzing automotive Functional Safety datasets.
+SafetyLens\cite{narechania2020safetylens}, the visual data analysis tools, which helps engineers in analyzing automotive Functional Safety datasets.
 
 %体可视化常被研发人员用来设计制造产品和仿真模拟。
 Volume visualization is frequently utilized by developers to design products and perform simulations.
@@ -467,12 +467,13 @@ Matthew et al. \cite{Zappulla2019} introduced a methodology for the processing o
 Huettenberger et al. \cite{Huettenberger2015} used the data produced by optical measurements to visualize the areas of systematic errors on auto parts in order to achieve automatic detection.
 %Dutta等人开发了基于GMM数据的可视化技术，使用表面渲染和不确定的等值线来检测跨音速喷气发动机失速的早期迹象。
 Dutta et al. \cite{dutta2016situ} developed the tech of visualization of GMM based data using surface renderings and uncertain isocontours to detect the early signs of transonic jet engine stall.
+
 %   交互分析手段
 \subsection{Interactive Analysis Methods}
 % 交互式分析方法使研究人员挖掘传感信号数据的隐藏模式和价值信息。
-Interactive analysis methods assist researchers in uncovering hidden patterns and worthwhile information in signal sensing data.
+Interactive analysis methods assist researchers in uncovering hidden patterns \cite{narechania2020safetylens} and worthwhile information \cite{eirich2021irvine} in signal sensing data.
 %研究人员设计的原型系统提供了一套操作，帮助用户实现交互式数据探索。
-The prototype systems \cite{eirich2021irvine, narechania2020safetylens, suschnigg2020exploration, zhao2019visual, Zhou2018} designed by researchers provide a set of operations to assist users achieve interactive data exploration. 
+The prototype systems \cite{eirich2021irvine, zhao2019visual, Zhou2018} designed by researchers provide a set of operations to assist users achieve interactive data exploration. 
 %跟踪和监控帮助用户进行流畅的数据探索。
 Tracking \& monitoring assist users in carrying out fluent data exploration.
 %zhao等人在许多视图和面板中提供交互。当用户在每个视图中移动或点击鼠标时，将显示详细信息。为进一步的观察和分析提供了多视图显示模式。
@@ -483,7 +484,8 @@ Exploration \& navigation provide detail-on-demand and views update for users.
 PAVED \cite{cibulski2020paved} offered a selection on motor parameter subset performance constraints and preferences by a transformation of the mouse cursor.
 %知识外化和细化识别被经常用于异常发现和态势监测方面。
 Knowledge \& Externalization and Refinement \& Identification are commonly utilized in anomaly detection and situational monitoring.
-IRVINE \cite{eirich2021irvine} combines interactive clustering and data labeling techniques, allowing users to analyze clusters of engines with similar signatures. Analysing signatures from engines acoustic data to detect and understand previously unknown errors.
+Eirich et al. \cite{eirich2021irvine} combines interactive clustering and data labeling techniques, allowing users to analyze clusters of engines with similar signatures. Analysing signatures from engines acoustic data to detect and understand previously unknown errors.
+
 %   应用领域
 \subsection{Application Areas}
 %信号传感数据来源众多，主要应用于设计开发、工业生产、分析反馈领域。
@@ -492,7 +494,7 @@ Signal sensing data come from numerous sources and are mainly applied to \textit
 In Design \& Development, these work \cite{Huettenberger2015, Suzuki2020, Zappulla2019} use optical, pressure and temperature sensor data to visualize manufacturing materials and manufactured products. Other work are devoted to the analysis of multi-sensor data through visualization techniques for the study of durability \cite{zhao2019visual}, safety \cite{narechania2020safetylens}, and abnormal states \cite{eirich2021irvine} of manufactured products.
 % 在工业生产中，一些可视分析系统被设计用于工业生产态势监测，生产质量控制，生产产品检验。
 In Industrial Production, several visual analytics systems are designed for industrial production situational monitoring \cite{Zhou2018}, production quality control \cite{Huettenberger2015} and manufacturing product inspection \cite{eirich2021irvine}.
-%大多数研究工作都有分析反馈环节，比如：通过人机交互和专家合作方式分析参数集合用于改进电动机。
+%大多数研究工作都有分析反馈环节，比如：通过人机交互和专家合作方式分析参数集合用于改进电动机设计。
 In Analysis \& Feedback, most of the research work have the analytical feedback component, e.g., the analysis of parameter sets for the improvement of electric motor design by means of human-computer interaction and expert collaboration \cite{cibulski2020paved}.
 
 
